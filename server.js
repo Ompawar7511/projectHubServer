@@ -6,7 +6,7 @@ import app from "./src/app.js";
 dotenv.config();
 connectDB();
 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.MONGO_URI;
 app.listen(PORT, () => {
   console.log(`FlyMail server running on port ${PORT}`);
 });

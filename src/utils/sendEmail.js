@@ -8,7 +8,7 @@ export const sendmail = async (to, subject, htmlContent) => {
       secure: true,
       auth: {
         user: "dreamdev87@gmail.com",
-        pass: process.env.EMAIL_PASS_KEY,
+        pass: process.env.Email,
       },
       tls: {
         rejectUnauthorized: false, // <-- this ignores self-signed cert errors
@@ -39,7 +39,7 @@ export const sendmailWithsender = async (from, to, subject, htmlContent) => {
       secure: true,
       auth: {
         user: "dreamdev87@gmail.com",
-        pass: process.env.EMAIL_PASS_KEY,
+        pass: process.env.Email,
       },
       tls: {
         rejectUnauthorized: false, // <-- this ignores self-signed cert errors
